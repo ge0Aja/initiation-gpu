@@ -13,7 +13,7 @@ cd $WORKDIR
 echo -e "\nStarting Jupyter Notebook on port ${NOTEBOOKPORT} on the $(hostname) server."
 echo -e "\nSSH tunnel command : "
 echo -e "\n==========- RUN IN YOUR COMPUTER TERMINAL -============\n"
-echo -e "ssh -NL ${NOTEBOOKPORT}:$(hostname):${NOTEBOOKPORT} ${USER}@${HOST}.lri.fr"
+echo -e "ssh -NL ${NOTEBOOKPORT}:$(hostname):${NOTEBOOKPORT} ${USER}@$(hostname).lri.fr"
 echo -e "\nThen you can use the url with the token given by jupyter\n"
 
 /usr/bin/python3 -m jupyter notebook --no-browser --port=${NOTEBOOKPORT} --ip='*'  # Open for all ip address = dangerous ?
