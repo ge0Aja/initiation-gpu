@@ -1,0 +1,10 @@
+# SSH configuration file: replace LRI_USER by your LRI username
+# This file is to place at .ssh/config
+
+Host lri 
+    HostName pl-ssh.lri.fr 
+    User LRI_USER
+
+Host kepler 
+    ProxyCommand ssh -q lri nc kepler.lri.fr 22 
+    User LRI_USER
